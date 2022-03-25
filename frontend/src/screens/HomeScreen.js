@@ -1,6 +1,9 @@
 import React from 'react';
 import UserStore from '../stores/UserStore';
 import SubmitButton from "../components/login/SubmitButton";
+import ApplyForm from '../components/home/applyform';
+import OutstandingLoan from '../components/home/applyform';
+import '../tut.css'
 
 
 function Home(props) {
@@ -9,15 +12,37 @@ function Home(props) {
 
     return (
         <div>
-            Welcome {username}
+            Welcome {username}!
 
             <SubmitButton
                 text={'Log out'}
                 disabled={false}
                 onClick={props.logOut}
             />
+
+            <div className ="applyform">
+                <div className = 'container'>
+                <ApplyForm
+                    />
+                </div>
+            </div>
+
+            <div className ="outstanding">
+                <div className = 'container'>
+                <OutstandingLoan
+                    />
+                </div>
+            </div>
+
         </div>
+
+        
     )
+
+    
+
 }
+
+
 
 export default Home;

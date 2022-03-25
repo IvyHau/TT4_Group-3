@@ -65,4 +65,4 @@ class PayOutstanding extends React.Component {
     }
 }
 
-export default ApplyForm;
+export default OutstandingLoan;
